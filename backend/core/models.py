@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
+from auditlog.registry import auditlog
 
 class Organization(models.Model):
     PLAN_CHOICES = [
@@ -14,7 +15,7 @@ class Organization(models.Model):
 
     def __str__(self):
         return self.name
-    
+auditlog.register(Organization)  
     
 class User(AbstractUser):
     ROLE_CHOICES = [
@@ -34,6 +35,8 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+    
+auditlog.register(User)
 
 
 class Company(models.Model):
@@ -54,7 +57,8 @@ class Company(models.Model):
     def __str__(self):
         return self.name
     
-    
+auditlog.register(Company)
+   
 class Contact(models.Model):
     company = models.ForeignKey(
         Company,
@@ -92,3 +96,5 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.full_name
+    
+auditlog.register(Contact)

@@ -1,1 +1,12 @@
+# Ignore environment files
 backend/.env
+
+# Ignore all Python cache folders
+__pycache__/
+
+# Ignore all compiled Python files
+*.pyc
+
+# Optional: ignore specific backend cache paths (if needed)
+backend/config/__pycache__/
+backend/core/__pycache__/

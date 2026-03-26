@@ -33,9 +33,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'auditlog',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,3 +142,9 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+import os
+
+CORS_ALLOWED_ORIGINS = [
+    os.getenv("FRONTEND_URL"),
+]

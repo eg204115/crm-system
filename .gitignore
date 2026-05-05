@@ -10,3 +10,4 @@ __pycache__/
 # Optional: ignore specific backend cache paths (if needed)
 backend/config/__pycache__/
 backend/core/__pycache__/
+crm_backend/.env

@@ -1,5 +1,6 @@
 # crm-system
 
 <!-- Backend -->
-cd backend
+cd crm_backend
+
 python manage.py runserver

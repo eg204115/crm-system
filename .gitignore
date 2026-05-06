@@ -1,5 +1,5 @@
 # Ignore environment files
-backend/.env
+crm_backend/.env
 
 # Ignore all Python cache folders
 __pycache__/
@@ -10,4 +10,11 @@ __pycache__/
 # Optional: ignore specific backend cache paths (if needed)
 backend/config/__pycache__/
 backend/core/__pycache__/
-crm_backend/.env
+
+crm_backend/venv/
+crm_backend/db.sqlite3
+crm_backend/migrations/
+crm_backend/staticfiles/
+crm_backend/media/
+crm_backend/logs/
+crm_backend/cache/

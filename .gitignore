@@ -18,3 +18,8 @@ crm_backend/staticfiles/
 crm_backend/media/
 crm_backend/logs/
 crm_backend/cache/
+crm_backend/accounts/migrations/
+crm_backend/organizations/migrations/
+crm_backend/contacts/migrations/
+crm_backend/companies/migrations/
+crm_backend/activity_logs/migrations/
